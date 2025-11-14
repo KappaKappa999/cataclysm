@@ -110,7 +110,7 @@ header {
     background-image: url(../img:/header-bg-mobile.jpg);;
     height: 100vh;
     padding-top: 4rem;
-    background-position: right center;
+    background-position: center center;
   }
 
   .hero h1 {
