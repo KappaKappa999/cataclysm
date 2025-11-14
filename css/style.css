@@ -1,22 +1,127 @@
-/* styles.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 375px; 
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  color: white;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
-    font-size: 36px;
-    margin-top: 50px;
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1.5rem 1.5rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-p {
-    color: #666;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
+/* LOGO */
+.logo {
+  color: white;
+  letter-spacing: 1px;
+  font-family: 'Erica One', sans-serif;
+  font-weight: 400;
+  font-size: 3rem; 
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.burger {
+  width: 32px; 
+  height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* =============================
+   RESPONSIVE (FINO A 375px)
+============================= */
+@media (max-width: 375px) {
+  header {
+    padding: 1rem 1.5rem; /* riduce il padding per adattarsi meglio su mobile */
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .burger {
+    width: 22px;
+    height: 14px;
+  }
+}
+
+
+/* =============================
+   HERO SECTION
+============================= */
+.hero {
+  height: 100vh;
+  background-image: url(../img:/header-bg-desktop.jpg); /* immagine desktop */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem; /* spazio per l'header */
+}
+
+/* Testo principale */
+.hero h1 {
+  font-family: 'Erica One', sans-serif; /* font display scelto */
+  font-weight: 400; /* Erica One ha un solo peso */
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* migliora leggibilità sullo sfondo */
+  margin: 0;
+}
+
+/* Sottotitolo */
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+/* =============================
+   RESPONSIVE (FINO A 375px)
+============================= */
+@media (max-width: 375px) {
+  .hero {
+    background-image: url(../img:/header-bg-mobile.jpg);;
+    height: 100vh;
+    padding-top: 4rem;
+    background-position: right center;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  
 }
